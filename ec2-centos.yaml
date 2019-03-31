@@ -1,0 +1,16 @@
+---
+  - name: Provision CentOS7 Ec2
+    hosts: localhost
+      - name: Provision CentOS 7
+        ec2:
+          aws_region: eu-west-1
+          key_name: mykey
+          instance_type: t2.micro
+          image: ami-0ff760d16d9497662
+          wait: yes
+          group: webserver
+          count: 3
+          vpc_subnet_id: subnet-b73c48ff
+          assign_public_ip: yes
+          group: default
+          key_name: Laptop

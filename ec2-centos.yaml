@@ -10,7 +10,7 @@
           image: ami-0ff760d16d9497662
           wait: yes
           group: webserver
-          count: 3
+          count: 1
           vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
           group: default

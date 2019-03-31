@@ -1,6 +1,7 @@
 ---
   - name: Provision CentOS7 Ec2
     hosts: localhost
+    tasks:
       - name: Provision CentOS 7
         ec2:
           aws_region: eu-west-1

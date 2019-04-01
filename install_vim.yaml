@@ -1,6 +1,7 @@
 ---
  - name: Install vim
    hosts: all
+   gather_facts: false
    tasks:
      - name: Install vim on Centos 7
        when: asnible_distribution == "CentOS" 

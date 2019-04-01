@@ -9,9 +9,8 @@
           instance_type: t2.micro
           image: ami-0ff760d16d9497662
           wait: yes
-          group: webserver
+          group: default
           count: 1
           vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
-          group: default
-          key_name: Laptop
+          key_name: awx

@@ -1,10 +1,10 @@
 ---
  - name: Install vim
    hosts: all
-   gather_facts: false
+   gather_facts: no
    tasks:
      - name: Install vim on Centos 7
-       when: ( ansible_distribution == "CentOS" )
+       when: ansible_distribution == "CentOS" 
        yum: 
          name: vim
          state: present

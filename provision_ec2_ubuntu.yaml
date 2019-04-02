@@ -1,4 +1,8 @@
-- name: Provision Ubuntu 16.04 LTS
+---
+- name: Provision CentOS7 Ec2
+  hosts: localhost
+  tasks:
+    - name: Provision Ubuntu 16.04 LTS
         ec2:
           aws_region: eu-west-1
           key_name: awx

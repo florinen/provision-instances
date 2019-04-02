@@ -11,6 +11,7 @@
           vpc_subnet_id: subnet-00a05e1cf84a5842d
           assign_public_ip: yes
           group: awx-sg
+          name: centos 7
           key_name: awx
 
       - name: Provision Ubuntu 16.04 LTS
@@ -26,6 +27,7 @@
                sudo apt-get install python -y
                sudo apt-get install git -y
           group: awx-sg
+          name: ununtu 16
           key_name: awx
       
       - name: Provision Debian GNU-Linux8
@@ -37,6 +39,7 @@
           vpc_subnet_id: subnet-00a05e1cf84a5842d
           assign_public_ip: yes
           group: awx-sg
+          name: debian
           key_name: awx
 
       - name: Provision Windows 2016
@@ -48,4 +51,5 @@
           vpc_subnet_id: subnet-00a05e1cf84a5842d
           assign_public_ip: yes
           group: awx-sg
-          key_name: awx
+          name: win-16
+          

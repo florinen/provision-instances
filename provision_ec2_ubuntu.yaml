@@ -9,17 +9,12 @@
           key_name: awx
           instance_type: t2.micro
           image: ami-00182431c78dff2fa
+          user_data: |
+               #!/bin/sh
+               sudo apt-get -y update && sudo apt-get install -y python
           wait: yes
           wait_timeout: 180
           group: default
           count: 1
           vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
-    
-    pre_tasks:
-      - name: Install Python if not already present.
-        raw: test -e /usr/bin/python || (sudo apt-get -y update && sudo apt-get install -y python)
-        changed_when: False
-
-      - name: Gather facts after Python is definitely present.
-        setup:

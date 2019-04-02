@@ -1,0 +1,5 @@
+- name: ping new windows instances
+  hosts: windows
+  gather_facts: false
+  tasks:
+    - action: win_ping

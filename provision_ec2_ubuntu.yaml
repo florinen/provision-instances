@@ -9,9 +9,6 @@
           key_name: awx
           instance_type: t2.micro
           image: ami-00182431c78dff2fa
-          user_data: |
-               #!/bin/sh
-               sudo apt-get install python -y
           wait: yes
           wait_timeout: 180
           group: default
@@ -21,7 +18,7 @@
     
     pre_tasks:
       - name: Install Python if not already present.
-        raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+        raw: test -e /usr/bin/python || (sudo apt -y update && apt install -y python-minimal)
         changed_when: False
 
       - name: Gather facts after Python is definitely present.

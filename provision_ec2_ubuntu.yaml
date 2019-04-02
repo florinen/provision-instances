@@ -18,5 +18,6 @@
           count: 1
           vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
+    tasks:      
        - name: Gather facts after Python is definitely present.
          setup:

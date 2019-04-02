@@ -22,6 +22,9 @@
           image: ami-00182431c78dff2fa
           wait: yes
           group: default
+          user_data: |
+               #!/bin/sh
+               sudo apt-get install python -y
           count: 1
           vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes

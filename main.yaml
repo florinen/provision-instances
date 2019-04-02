@@ -24,10 +24,6 @@
           group: default
           count: 1
           vpc_subnet_id: subnet-b73c48ff
-          user_data: |
-            #!/bin/sh
-            sudo apt-get install python -y
-            sudo apt-get install git -y
           name: ununtu 16
           assign_public_ip: yes
                 

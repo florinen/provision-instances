@@ -8,9 +8,9 @@
           instance_type: t2.micro
           image: ami-0ff760d16d9497662
           count: 1
-          vpc_subnet_id: subnet-00a05e1cf84a5842d
+          vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
-          group: awx-sg
+          group: default
           name: centos 7
           key_name: awx
 
@@ -20,13 +20,13 @@
           instance_type: t2.micro
           image: ami-08660f1c6fb6b01e7
           count: 1
-          vpc_subnet_id: subnet-00a05e1cf84a5842d
+          vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
           user_data: |
                #!/bin/sh
                sudo apt-get install python -y
                sudo apt-get install git -y
-          group: awx-sg
+          group: default
           name: ununtu 16
           key_name: awx
       
@@ -36,9 +36,9 @@
           instance_type: t2.micro
           image: ami-3291be54
           count: 1
-          vpc_subnet_id: subnet-00a05e1cf84a5842d
+          vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
-          group: awx-sg
+          group: default
           name: debian
           key_name: awx
 
@@ -48,8 +48,8 @@
           instance_type: t2.micro
           image: ami-05ded958b37e57597
           count: 1
-          vpc_subnet_id: subnet-00a05e1cf84a5842d
+          vpc_subnet_id: subnet-b73c48ff
           assign_public_ip: yes
-          group: awx-sg
+          group: default
           name: win-16
           

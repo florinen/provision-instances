@@ -12,6 +12,7 @@
                #!/bin/sh
                sudo apt-get install python -y
           wait: yes
+          wait_timeout: 180
           group: default
           count: 1
           vpc_subnet_id: subnet-b73c48ff

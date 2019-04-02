@@ -5,7 +5,7 @@
       - name: Provision CentOS 7
         ec2:
           aws_region: eu-west-1
-          key_name: awx
+          key_name: awx-server
           instance_type: t2.micro
           image: ami-0ff760d16d9497662
           wait: yes
@@ -17,7 +17,7 @@
       - name: Provision Ubuntu 16.04 LTS
         ec2:
           aws_region: eu-west-1
-          key_name: awx
+          key_name: awx-server
           instance_type: t2.micro
           image: ami-00182431c78dff2fa
           wait: yes
@@ -32,7 +32,7 @@
       - name: Provision Debian 
         ec2:
           aws_region: eu-west-1
-          key_name: awx
+          key_name: awx-server
           instance_type: t2.micro
           image: ami-02fc24d56bc5f3d67
           wait: yes
@@ -44,7 +44,7 @@
       - name: Provision Windows 2016
         ec2:
           aws_region: eu-west-1
-          key_name: awx
+          key_name: awx-server
           instance_type: t2.micro
           image: ami-05ded958b37e57597
           wait: yes

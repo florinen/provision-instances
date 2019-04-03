@@ -1,11 +1,10 @@
 ---
-- name: Creatre files older than 90 days
-  hosts: '{{ hosts }}'
+- name: Create file
+  hosts: all
+  become: yes
+  become_method: sudo
   tasks:
-    - name: Create files
-      file:
-        path: /tmp/file{1..5}
-        state: touch
-      access_time: 20180501
-      when: ansible_distribution == "CentOS"
-    
+    - name: create a file that is larger than 2GB
+      shell: dd if=/dev/urandom of=/tmp/file.txt bs=2200000 count=1000
+    - name: create 3 files with a custom date
+      shell: touch -d 20180501  /tmp/file{1..3}

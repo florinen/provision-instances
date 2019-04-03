@@ -1,6 +1,6 @@
 ---
 - name: Creatre files older than 90 days
-hosts: all
+hosts: '{{ hosts }}'
 tasks:
   - name: Create files
     file:
